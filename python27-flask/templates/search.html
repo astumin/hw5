@@ -1,0 +1,12 @@
+<body>
+    <h1>乗り換え案内</h1>
+        <ul>
+            <li>{{fromstation}}から{{tostation}}への乗換案内</li>
+            {% for i in stationlist%}
+                {% if paths[i] != 'START'%}
+                    {{i}}まで{{paths[i]}}で移動する
+                {% endif %}
+                <br>
+            {% endfor %}
+        </ul>
+</body>
